@@ -1,0 +1,35 @@
+/* Concept 03: original landing content with the cinematic second hero. */
+.nav{height:76px;background:#100d0dec;color:#fff;border-bottom:1px solid #ffffff30;backdrop-filter:blur(22px) saturate(145%);-webkit-backdrop-filter:blur(22px) saturate(145%);box-shadow:0 8px 24px #0003}
+.nav .logo{color:#fff}.nav nav{background:#ffffff13;border-color:#ffffff26;box-shadow:inset 0 1px 0 #ffffff27}.nav nav a:hover{background:#ffffff24;color:#ff6a35}.nav-cta{background:#ffffff12;border:1px solid #ffffff55;color:#fff}.nav-cta:hover{background:#ff5e2d;border-color:#ff5e2d}
+.hybrid-hero{position:relative;isolation:isolate;overflow:hidden;width:min(100% - 64px,1320px);height:min(760px,calc(100svh - 76px));min-height:620px;margin-inline:auto;background:radial-gradient(ellipse at 50% 62%,#632011 0%,#180d0d 49%,#060607 85%);color:#fff;padding:27px 30px;border-radius:0 0 24px 24px}
+.hybrid-hero-grid{position:absolute;inset:0;background:linear-gradient(90deg,#ffffff17 1px,transparent 1px),linear-gradient(#ffffff17 1px,transparent 1px);background-size:25% 50%;opacity:.32;pointer-events:none;z-index:3}
+.hybrid-overline{position:relative;z-index:5;display:flex;justify-content:space-between;color:#c8c0bb;font-size:11px;font-weight:700;letter-spacing:.08em;margin:0}
+.hybrid-hero h1{position:relative;z-index:4;font-size:clamp(84px,13.7vw,206px);line-height:.95;letter-spacing:-.09em;text-align:center;white-space:nowrap;margin:38px 0 0;font-family:MTSWide,Arial,sans-serif;background:linear-gradient(#faf8f6,#c5b9b3 53%,#625451);color:transparent;background-clip:text;-webkit-background-clip:text}
+.hybrid-hero h1 span{color:#f3e8e1}
+.hybrid-video{position:absolute;z-index:2;width:min(930px,86%);height:auto;aspect-ratio:1;left:50%;top:5%;transform:translateX(-50%);object-fit:contain;filter:invert(1) hue-rotate(180deg) saturate(1.65) contrast(1.22);mix-blend-mode:screen;opacity:.95;pointer-events:none}
+.hybrid-video-shade{position:absolute;z-index:3;inset:0;background:linear-gradient(180deg,transparent 40%,#07060810 70%,#080607b8 100%);pointer-events:none}
+.hybrid-hero-bottom{position:absolute;z-index:5;bottom:32px;left:30px;right:30px;display:flex;justify-content:space-between;align-items:end;gap:20px}
+.hybrid-hero-bottom p{font-family:MTSWide,Arial,sans-serif;max-width:630px;font-size:clamp(22px,2.8vw,37px);line-height:1.14;letter-spacing:-.045em;margin:0 0 24px}
+.hybrid-button{display:inline-flex;gap:45px;align-items:center;background:#ffffffd6;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid #fff;border-radius:6px;padding:15px 18px;color:#1e1617;font-size:12px;font-weight:700;text-transform:uppercase;transition:background .2s,transform .2s}.hybrid-button:hover{background:#fff;transform:translateY(-3px)}.hybrid-button span{font-size:19px;color:#e54a20}
+.hybrid-down{flex:none;display:grid;place-items:center;width:56px;height:56px;border:1px solid #ffffff9c;border-radius:50%;font-size:25px;transition:background .2s,transform .2s}.hybrid-down:hover{background:#ff5e2d;transform:translateY(4px)}
+.hybrid-caption{position:absolute;z-index:5;right:36px;bottom:152px;color:#d7c8c0;font-size:10px;line-height:1.5;text-align:right;letter-spacing:.07em}
+/* A restrained glass bridge carries the hero language into the original page. */
+.intro{background:radial-gradient(circle at 75% -10%,#fff1e8,transparent 35%),#fff8fb}.intro .feature:nth-child(2),.intro .feature:nth-child(4){background:linear-gradient(145deg,#ffffffee,#fff0f7c4);border:1px solid #fff;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:inset 0 1px 0 #fff,0 15px 35px #a8295618}
+.model-stage{background:radial-gradient(circle at 30% 20%,#ffd18b,transparent 38%),linear-gradient(145deg,#e45c34 5%,#f43773 55%,#a50bcb)}
+.assistant-demo,.hero-art .mock{backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px)}
+@media(max-width:1050px){.hybrid-hero h1{font-size:clamp(60px,12.5vw,130px)}.hybrid-video{width:105%;top:12%}}
+@media(max-width:640px){.nav{height:70px}.hybrid-hero{width:min(100% - 24px,1320px);height:calc(100svh - 70px);min-height:630px;padding:19px 18px;border-radius:0 0 18px 18px}.hybrid-overline{font-size:9px}.hybrid-hero h1{font-size:clamp(36px,10.5vw,53px);margin-top:55px}.hybrid-video{width:175%;top:14%;opacity:1}.hybrid-hero-bottom{left:18px;right:18px;bottom:22px}.hybrid-hero-bottom p{font-size:22px;max-width:310px}.hybrid-button{font-size:10px;gap:20px;padding:12px}.hybrid-down{width:43px;height:43px;font-size:21px}.hybrid-caption{right:19px;bottom:167px;font-size:8px}}
+@media(prefers-reduced-motion:reduce){.hybrid-video{display:none}.hybrid-hero{background:radial-gradient(circle at 50% 65%,#cf4c20,#3c1514 38%,#080709 75%)}.hybrid-button,.hybrid-down{transition:none}}
+@media(max-width:640px){.hybrid-caption{display:none}}
+
+/* Light key visual: use the supplied film in its original colour space. */
+.nav{background:#fffffff0;color:#261b26;border-bottom:1px solid #ecdfe6;box-shadow:0 8px 28px #8b125014}
+.nav .logo{color:#261b26}.nav nav{background:#fff8fb;border-color:#fff;box-shadow:inset 0 1px 0 #fff,0 7px 20px #8b125010}.nav nav a:hover{background:#fbe6f1;color:#bc1689}.nav-cta{background:#301a31;color:#fff;border-color:#301a31}.nav-cta:hover{background:#8e1b76;border-color:#8e1b76}
+.hybrid-hero{background:#fff;color:#261b26}
+.hybrid-hero-grid{background:linear-gradient(90deg,#3b15340c 1px,transparent 1px),linear-gradient(#3b15340c 1px,transparent 1px);opacity:.6}
+.hybrid-hero h1{margin-top:62px;background:linear-gradient(#242026,#81727c);background-clip:text;-webkit-background-clip:text}.hybrid-hero h1 span{color:#db158e}
+.hybrid-video{filter:none;mix-blend-mode:normal;opacity:1;top:2%}
+.hybrid-video-shade{background:linear-gradient(180deg,#fff0 60%,#fff8 80%,#fff 100%)}
+.hybrid-hero-bottom p{max-width:650px;color:#271d27;text-shadow:0 1px 12px #fff,0 1px 4px #fff}
+.hybrid-button{background:#301a31;color:#fff;border-color:#301a31;box-shadow:0 12px 30px #80245c2b}.hybrid-button:hover{background:#8e1b76}.hybrid-button span{color:#ff9b6f}
+@media(max-width:640px){.hybrid-hero h1{margin-top:80px}.hybrid-video{top:11%}.hybrid-hero-bottom p{max-width:320px;font-size:21px}.hybrid-video-shade{background:linear-gradient(180deg,#fff0 55%,#fff9 79%,#fff 100%)}}
