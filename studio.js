@@ -57,10 +57,18 @@ const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
 
 const pageNav = document.querySelector('.figma-rebuild .nav');
 if (pageNav) {
+  const darkSections = document.querySelectorAll('.harizma-concept :is(.studio-hero, .f-models, .f-course, .f-final)');
   const updateNav = () => {
     const currentY = Math.max(0, window.scrollY);
     pageNav.classList.toggle('is-scrolled', currentY > 24);
-    pageNav.classList.toggle('is-on-light', motionHero?.getBoundingClientRect().bottom <= pageNav.offsetHeight);
+    const sampleY = pageNav.getBoundingClientRect().bottom / 2;
+    const isOnDark = [...darkSections].some(section => {
+      const { top, bottom } = section.getBoundingClientRect();
+      return top <= sampleY && bottom > sampleY;
+    });
+    pageNav.classList.toggle('is-on-light', darkSections.length
+      ? !isOnDark
+      : motionHero?.getBoundingClientRect().bottom <= pageNav.offsetHeight);
   };
   updateNav();
   window.addEventListener('scroll', updateNav, { passive: true });
