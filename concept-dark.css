@@ -384,3 +384,12 @@
     height: 100%;
   }
 }
+
+@media (max-width: 640px) {
+  .concept-dark .f-course-grid .course-selection {
+    grid-column: 1 / -1;
+  }
+  .concept-dark .course-selection .card-art {
+    top: 62%;
+  }
+}
