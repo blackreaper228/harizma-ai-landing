@@ -66,9 +66,9 @@ if (pageNav) {
       const { top, bottom } = section.getBoundingClientRect();
       return top <= sampleY && bottom > sampleY;
     });
-    pageNav.classList.toggle('is-on-light', darkSections.length
+    pageNav.classList.toggle('is-on-light', !pageNav.closest('.concept-dark') && (darkSections.length
       ? !isOnDark
-      : motionHero?.getBoundingClientRect().bottom <= pageNav.offsetHeight);
+      : motionHero?.getBoundingClientRect().bottom <= pageNav.offsetHeight));
   };
   updateNav();
   window.addEventListener('scroll', updateNav, { passive: true });

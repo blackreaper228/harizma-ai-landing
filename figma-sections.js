@@ -6,7 +6,10 @@ const modelData = {
   audio: [['ElevenLabs', 'Озвучка и работа с голосом', 'claude.svg'], ['Музыка', 'Звуковые идеи и композиции', 'banana.svg']]
 };
 document.querySelectorAll('[data-model]').forEach(button => button.addEventListener('click', () => {
-  document.querySelectorAll('[data-model]').forEach(tab => tab.classList.toggle('active', tab === button));
+  document.querySelectorAll('[data-model]').forEach(tab => {
+    tab.classList.toggle('active', tab === button);
+    if (tab.hasAttribute('aria-pressed')) tab.setAttribute('aria-pressed', String(tab === button));
+  });
   modelCards.replaceChildren(...modelData[button.dataset.model].map(([name, description, icon]) => {
     const card = document.createElement('article');
     const image = document.createElement('img'); image.src = `assets/${icon}`; image.alt = '';
