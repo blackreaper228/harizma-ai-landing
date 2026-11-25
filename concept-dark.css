@@ -293,3 +293,35 @@
   .concept-dark .f-course > .f-wrap:not(.f-course-grid) { min-height: 366px; }
   .concept-dark .f-course-art { margin-block: -70px -42px; }
 }
+
+/* Keep the primary action visible alongside the navigation at every width. */
+.concept-dark .nav-cta {
+  flex: 0 0 auto;
+  margin-left: auto;
+}
+@media (max-width: 640px) {
+  .concept-dark .nav {
+    height: 108px;
+  }
+  .concept-dark .nav-inner {
+    grid-template-columns: 1fr auto;
+    justify-items: stretch;
+    column-gap: 12px;
+    row-gap: 8px;
+  }
+  .concept-dark .nav .logo {
+    justify-self: start;
+  }
+  .concept-dark .nav-cta {
+    justify-self: end;
+    align-self: center;
+    height: 38px;
+    padding: 0 13px;
+    font-size: 10px;
+    border-radius: 12px;
+  }
+  .concept-dark .nav nav {
+    grid-column: 1 / -1;
+    justify-content: center;
+  }
+}
