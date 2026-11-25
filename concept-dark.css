@@ -326,70 +326,35 @@
   }
 }
 
-/* Keep the sphere in the artwork area, clear of the course card copy. */
-.concept-dark .course-selection .card-art {
-  left: 50%;
-  overflow: hidden;
-}
-.concept-dark .course-selection .art-copy {
-  max-width: 52%;
-}
-.concept-dark .course-selection .card-art .f-course-orb-left {
-  --orb-size: auto;
-  top: auto;
-  left: auto;
-  right: -22%;
-  bottom: -58%;
-  width: 142%;
-  height: auto;
-  aspect-ratio: 1;
-  max-width: none;
-  border-radius: 50%;
+/* The sphere remains behind the cards, below their text. */
+.concept-dark .f-course .f-course-grid > .f-course-orb-left {
+  z-index: 0;
+  top: clamp(220px, 20vw, 290px);
+  left: -18%;
+  width: clamp(520px, 52vw, 900px);
+  height: clamp(520px, 52vw, 900px);
   transform: rotate(171.48deg);
-  opacity: .8;
 }
-.concept-dark .f-course-grid .course-selection .art-frame {
-  width: min(92%, 310px);
-  height: 86%;
+.concept-dark .f-course-grid .art-card { z-index: 1; }
+.concept-dark .f-course-grid .art-frame { min-width: 220px; min-height: 190px; }
+.concept-dark .f-course-grid .course-selection .art-frame { min-width: 260px; }
+.concept-dark .f-course-grid .art-image,
+.concept-dark .f-course-grid .course-errors .art-image,
+.concept-dark .f-course-grid .course-privacy .art-image {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 @media (max-width: 1090px) {
-  .concept-dark .course-selection .card-art {
-    top: 48%;
-    left: 0;
-  }
-  .concept-dark .course-selection .art-copy {
-    max-width: none;
-  }
-  .concept-dark .course-selection .card-art .f-course-orb-left {
-    right: -15%;
-    bottom: -105%;
-    width: 110%;
-  }
-  .concept-dark .f-course-grid .course-selection .art-frame {
-    width: 74%;
-    height: 100%;
-  }
+  .concept-dark .f-course .f-course-grid > .f-course-orb-left { top: 250px; left: -25%; }
 }
 @media (max-width: 640px) {
-  .concept-dark .course-selection .card-art {
-    top: 54%;
-  }
-  .concept-dark .course-selection .card-art .f-course-orb-left {
-    right: -18%;
-    bottom: -110%;
-    width: 115%;
-  }
-  .concept-dark .f-course-grid .course-selection .art-frame {
-    width: 72%;
-    height: 100%;
-  }
-}
-
-@media (max-width: 640px) {
-  .concept-dark .f-course-grid .course-selection {
-    grid-column: 1 / -1;
-  }
-  .concept-dark .course-selection .card-art {
-    top: 62%;
+  .concept-dark .f-course .f-course-grid > .f-course-orb-left {
+    top: 220px;
+    left: -230px;
+    width: 520px;
+    height: 520px;
   }
 }
