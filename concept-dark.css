@@ -326,13 +326,22 @@
   }
 }
 
-/* The sphere remains behind the cards, below their text. */
-.concept-dark .f-course .f-course-grid > .f-course-orb-left {
+/* Clip the background sphere to the lower part of the first card's footprint. */
+.concept-dark .f-course-grid .course-orb-stage {
+  position: absolute;
+  grid-area: 1 / 1 / 2 / 3;
+  inset: 55% 0 0;
   z-index: 0;
-  top: clamp(220px, 20vw, 290px);
-  left: -18%;
-  width: clamp(520px, 52vw, 900px);
-  height: clamp(520px, 52vw, 900px);
+  overflow: hidden;
+  border-radius: 0 0 clamp(26px, 2vw, 40px) clamp(26px, 2vw, 40px);
+  pointer-events: none;
+}
+.concept-dark .f-course-grid .course-orb-stage .f-course-orb-left {
+  top: -100%;
+  left: -20%;
+  width: 125%;
+  height: auto;
+  max-width: none;
   transform: rotate(171.48deg);
 }
 .concept-dark .f-course-grid .art-card { z-index: 1; }
@@ -348,13 +357,27 @@
   object-fit: contain;
 }
 @media (max-width: 1090px) {
-  .concept-dark .f-course .f-course-grid > .f-course-orb-left { top: 250px; left: -25%; }
+  .concept-dark .f-course-grid .course-orb-stage {
+    grid-area: 1 / 1 / 2 / 2;
+    top: 62%;
+  }
+  .concept-dark .f-course-grid .course-orb-stage .f-course-orb-left {
+    top: -70%;
+    left: -45%;
+    width: 190%;
+  }
 }
 @media (max-width: 640px) {
-  .concept-dark .f-course .f-course-grid > .f-course-orb-left {
-    top: 220px;
-    left: -230px;
-    width: 520px;
-    height: 520px;
+  .concept-dark .f-course-grid .course-selection {
+    grid-column: 1 / -1;
+  }
+  .concept-dark .f-course-grid .course-orb-stage {
+    grid-area: 1 / 1 / 2 / 3;
+    top: 62%;
+  }
+  .concept-dark .f-course-grid .course-orb-stage .f-course-orb-left {
+    top: -90%;
+    left: -25%;
+    width: 150%;
   }
 }
