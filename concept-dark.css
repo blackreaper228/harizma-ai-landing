@@ -180,6 +180,7 @@
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-template-rows: repeat(2, minmax(340px, 384px));
+  align-items: stretch;
   gap: clamp(16px, 2.22vw, 32px);
   margin-top: var(--section-space);
 }
@@ -194,15 +195,26 @@
 .course-speed { grid-area: 1 / 3; }
 .course-privacy { grid-area: 2 / 3; }
 .course-assistant { grid-area: 1 / 4 / 3 / 5; }
-.f-course-grid .art-frame { width: min(86%, 299px); height: 61%; right: 0; bottom: 0; }
+.f-course-grid .art-frame { width: min(90%, 299px); height: 56%; right: 0; bottom: 0; }
 .f-course-grid .course-selection .art-frame { width: min(51%, 310px); height: 81%; }
 .f-course-grid .course-errors .art-frame { right: -8%; width: min(100%, 336px); }
 .f-course-grid .course-errors .art-image { width: 94.71%; height: 112.58%; left: 16.01%; top: -5.66%; object-fit: fill; }
 .f-course-grid .course-results .art-frame { width: min(74%, 222px); height: min(62%, 224px); right: 7%; }
 .f-course-grid .course-privacy .art-image { width: 109.12%; height: 115.42%; left: -.14%; top: -4.51%; object-fit: fill; }
-.f-course-grid .course-assistant .art-frame { width: 118%; right: -9%; height: 60%; bottom: -4%; overflow: visible; transform: rotate(-16deg); }
+.f-course-grid .course-assistant .art-frame { width: 138%; right: -17%; height: 74%; bottom: -10%; overflow: visible; transform: rotate(-16deg); }
 .f-course-grid .art-card { --glow-x: 88%; }
+.f-course-grid .course-selection { --glow-x: 91%; }
+.f-course-grid .course-errors { --glow-x: 110%; }
 .f-course-grid .course-assistant { --glow-x: 60%; }
+.concept-dark .f-course-grid .violet .glow-1 { width: 894px; height: 872px; bottom: -538px; }
+.concept-dark .f-course-grid .violet .glow-2 { width: 864px; height: 1114px; bottom: -537px; }
+.concept-dark .f-course-grid .violet .glow-3 { width: 546px; height: 796px; bottom: -573px; }
+.concept-dark .f-course-grid .orange .glow-1 { width: 865px; height: 645px; bottom: -401px; }
+.concept-dark .f-course-grid .orange .glow-2 { width: 832px; height: 824px; bottom: -399px; }
+.concept-dark .f-course-grid .orange .glow-3 { width: 490px; height: 589px; bottom: -426px; }
+.concept-dark .f-course-grid .pink .glow-1 { width: 1425px; height: 1389px; bottom: -936px; }
+.concept-dark .f-course-grid .pink .glow-2 { width: 1377px; height: 1775px; bottom: -936px; }
+.concept-dark .f-course-grid .pink .glow-3 { width: 870px; height: 1269px; bottom: -993px; }
 
 .concept-dark .f-faq { padding: var(--section-space) 0; }
 .concept-dark .f-faq details { background: var(--card-fill); }
